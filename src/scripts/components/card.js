@@ -36,10 +36,20 @@ export const createCardElement = (data, userId, { onPreviewPicture, onLikeIcon, 
   const deleteButton = cardElement.querySelector(".card__control-button_type_delete");
   const infoButton = cardElement.querySelector(".card__control-button_type_info");
   const cardImage = cardElement.querySelector(".card__image");
+  const likesCount = cardElement.querySelector(".card__like-count");
 
   cardImage.src = data.link;
   cardImage.alt = data.name;
   cardElement.querySelector(".card__title").textContent = data.name;
+
+  if (likesCount) {
+    likesCount.textContent = data.likes.length;
+  }
+
+  const isLikedByUser = data.likes.some(like => like._id === userId);
+  if (isLikedByUser) {
+    likeButton.classList.add("card__like-button_is-active");
+  }
 
   if (data.owner && data.owner._id !== userId) {
     deleteButton.style.display = 'none';

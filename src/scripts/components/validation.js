@@ -10,6 +10,7 @@ const hideInputError = (formElement, inputElement, validationSettings) => {
   inputElement.classList.remove(validationSettings.inputErrorClass);
   errorElement.classList.remove(validationSettings.errorClass);
   errorElement.textContent = '';
+  inputElement.setCustomValidity('');
 };
 
 const checkInputValidity = (formElement, inputElement, validationSettings) => {
@@ -68,6 +69,7 @@ export const clearValidation = (formElement, validationSettings) => {
 
   inputList.forEach((inputElement) => {
     hideInputError(formElement, inputElement, validationSettings)
+    inputElement.setCustomValidity('')
   })
   disableSubmitButton(buttonElement, validationSettings)
 }
