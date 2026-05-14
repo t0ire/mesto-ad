@@ -1,5 +1,11 @@
-Стартовый набор для выполнения проектной работы Место
+# Mesto
 
-Для запуска приложения необходимо использовать live-server
-![изображение live-server](image.png)
-Live-server является расширением VSCode
+## Публикация
+
+Проект опубликован на GitHub Pages: [https://t0ire.github.io/webmesto/](https://t0ire.github.io/webmesto/)
+
+## Команды
+
+npm run dev      # запуск в режиме разработки
+npm run build    # сборка проекта
+npm run preview  # просмотр собранного проекта
