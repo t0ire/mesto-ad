@@ -151,6 +151,7 @@ openCardFormButton.addEventListener("click", () => {
 
 // отображение карточек
 const renderInitCards = (cards) => {
+  placesWrap.innerHTML = '';
   cards.forEach((data) => {
     placesWrap.append(
       createCardElement(data, userID,{
