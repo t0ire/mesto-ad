@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/webmesto/',
+  base: './',
   server: {
     open: true
   }
